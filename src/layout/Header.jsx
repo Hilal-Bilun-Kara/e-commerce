@@ -31,18 +31,18 @@ export default function Header() {
 
         <div className="flex text-white">
           <p>Follow Us:</p>
-          <a href="https://www.instagram.com/" target="_blank">
+          <a href="https://www.instagram.com/">
             <p>@</p>
           </a>
 
-          <a href="https://www.youtube.com/" target="_blank">
+          <a href="https://www.youtube.com/">
             <p>@</p>
           </a>
 
-          <a href="https://www.facebook.com/" target="_blank">
+          <a href="https://www.facebook.com/">
             <p>@</p>
           </a>
-          <a href="https://twitter.com/" target="_blank" className="text-white">
+          <a href="https://twitter.com/" className="text-white">
             <p>@</p>
           </a>
         </div>
@@ -54,19 +54,19 @@ export default function Header() {
           </p>
 
           <nav className="flex justify-between items-center ml-32 mr-[45%]">
-            <div className="flex items-center header-nav">
+            <div className="flex items-center">
               <ul className="flex space-x-4">
                 <li>
-                  <a href="#">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="#">Shop</a>
+                  <a href="/tum-urunler">Shop</a>
                 </li>
                 <li>
                   <a href="#">About</a>
                 </li>
                 <li>
-                  <a href="#">Blog</a>
+                  <a href="/blog">Blog</a>
                 </li>
                 <li>
                   <a href="#">Contact</a>
