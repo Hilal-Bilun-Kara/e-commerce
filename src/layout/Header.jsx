@@ -7,6 +7,10 @@ import {
   faShoppingCart,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
+import Instagram from "../assets/Vector-instagram.png";
+import Twitter from "../assets/Vector-twitter.png";
+import Youtube from "../assets/Vector-youtube.png";
+import Facebook from "../assets/Vector-facebook.png";
 
 export default function Header() {
   return (
@@ -29,21 +33,22 @@ export default function Header() {
           <p>Follow Us and get a chance to win 80% off</p>
         </div>
 
-        <div className="flex text-white">
-          <p>Follow Us:</p>
+        <div className="flex text-white items-center">
+          <p>Follow Us : </p>
           <a href="https://www.instagram.com/">
-            <p>@</p>
+            <img src={Instagram} alt="Instagram" className="mr-2 ml-2" />
           </a>
 
           <a href="https://www.youtube.com/">
-            <p>@</p>
+            <img src={Youtube} alt="Instagram" className="mr-2 ml-2" />
           </a>
 
           <a href="https://www.facebook.com/">
-            <p>@</p>
+            <img src={Facebook} alt="Instagram" className="mr-2 ml-2" />
           </a>
+
           <a href="https://twitter.com/" className="text-white">
-            <p>@</p>
+            <img src={Twitter} alt="Instagram" className="mr-2 ml-2" />
           </a>
         </div>
       </div>
