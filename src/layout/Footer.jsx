@@ -21,12 +21,11 @@ export default function Footer() {
     } else {
       setEmail(e.target.value);
       setErrorMessage("Your subscription request has been received");
-      // Abonelik işlemi için yapılacak diğer işlemleri buraya ekleyin
     }
   };
 
   return (
-    <div>
+    <div className="mt-[50%]">
       <div className="bg-[#FAFAFA] flex justify-between">
         <div className="flex">
           <p className="text-[#252B42] text-[20px] font-bold mt-[30px] mb-[30px] mx-28 flex items-center">
@@ -106,7 +105,7 @@ export default function Footer() {
       <div className="bg-[#FAFAFA] flex justify-between">
         <div className="flex">
           <p className="text-[#737373] text-[15px] font-bold mt-[20px] mb-[20px] mx-28 flex items-center">
-            Made With Love By Finland All Right Reserved
+            Made With Love By Hilal Bilun Kara All Right Reserved
           </p>
         </div>
       </div>

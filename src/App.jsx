@@ -4,12 +4,14 @@ import "./App.css";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import PageContent from "./layout/PageContent";
+import Slider from "./layout/Slider";
 
 function App() {
   return (
     <>
       <Header />
-      <PageContent />
+      <Slider />
+
       <Footer />
     </>
   );
