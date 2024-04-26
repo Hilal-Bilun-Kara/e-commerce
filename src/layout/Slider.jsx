@@ -13,32 +13,32 @@ const items = [
       "," +
       "but things on a small scale.",
     key: 1,
+    season: "Summer 2020",
   },
   {
     src: Slide1,
-    caption: "Slide 2 Caption",
+    caption: "SUMMER SEASON",
     buttonText: "SHOP NOW",
-    description: "Description for slide 2.",
+    description:
+      "We know how large objects will act" +
+      "," +
+      "but things on a small scale.",
+    season: "Summer 2020",
     key: 2,
-  },
-  {
-    src: Slide1,
-    caption: "Slide 3 Caption",
-    description: "Description for slide 3.",
-    key: 3,
   },
 ];
 
-function Slide({ src, caption, buttonText, description }) {
+function Slide({ src, caption, buttonText, description, season }) {
   return (
     <div className="relative w-full">
       <img src={src} className="w-full" alt="Slider Image" />
       <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white">
-        <h1 className="text-5xl font-bold mr-[32%] mt-[10%]">{caption}</h1>
-        <div className="text-5xl text-white font-bold mr-[32%] mt-[10%]">
-          <h4>{description}</h4>
-        </div>
-        <button className="bg-[#2DC071] font-bold text-white px-8 py-4 rounded mt-[10%] mr-[50%]">
+        <p className="text-l font-bold mr-[70%] mt-[5%] mb-[10px]">{season}</p>{" "}
+        <h1 className="text-6xl font-bold mr-[40%] ">{caption}</h1>
+        <p className="text-m mr-[45%] mt-[10px] whitespace-pre-line">
+          {description}
+        </p>
+        <button className="bg-[#2DC071] font-bold text-white px-8 py-4 rounded mt-[5%] mr-[66%]">
           {buttonText}
         </button>
       </div>
@@ -59,6 +59,10 @@ function Slider() {
     setActiveIndex(nextIndex);
   };
 
+  const btn = (index) => {
+    setActiveIndex(index);
+  };
+
   return (
     <div className="relative">
       {items.map((item, index) => (
@@ -72,6 +76,8 @@ function Slider() {
             src={item.src}
             caption={item.caption}
             buttonText={item.buttonText}
+            season={item.season}
+            description={item.description}
           />
         </div>
       ))}
@@ -87,6 +93,19 @@ function Slider() {
       >
         <img src={Right} alt="Right Arrow" />
       </button>
+      <div className="flex absolute top-[100vh] left-[44%] gap-3">
+        {items.map((item, index) => {
+          return (
+            <div
+              key={index}
+              onClick={() => btn(index)}
+              className={`bg-white w-20 h-2 ${
+                index === activeIndex ? "bg-blue-500" : ""
+              }`}
+            ></div>
+          );
+        })}
+      </div>
     </div>
   );
 }
