@@ -103,6 +103,13 @@ export default function Footer() {
           {errorMessage && <p className="text-red-500 mt-2">{errorMessage}</p>}
         </div>
       </div>
+      <div className="bg-[#FAFAFA] flex justify-between">
+        <div className="flex">
+          <p className="text-[#737373] text-[15px] font-bold mt-[20px] mb-[20px] mx-28 flex items-center">
+            Made With Love By Finland All Right Reserved
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
