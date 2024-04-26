@@ -88,8 +88,12 @@ export default function Header() {
               icon={faUser}
               className="text-[#00A1C1] hover:text-grey mr-2"
             />
-            <a href="#" className="hover:text-gray-300 mr-8">
-              Login/Register
+            <a href="/login/" className="hover:text-gray-300">
+              Login
+            </a>{" "}
+            /{" "}
+            <a href="/register/" className="hover:text-gray-300 mr-2">
+              Register
             </a>
             <FontAwesomeIcon
               icon={faSearch}

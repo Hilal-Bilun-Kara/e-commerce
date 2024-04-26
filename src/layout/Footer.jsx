@@ -1,8 +1,30 @@
+import { useState } from "react";
 import Facebook from "../assets/Vector-facebook-blue.png";
 import Instagram from "../assets/Vector-instagram-blue.png";
 import Twitter from "../assets/Vector-twitter-blue.png";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleInputChange = (event) => {
+    setEmail(event.target.value);
+    setErrorMessage(""); // Her input değişikliğinde hata mesajını temizle
+  };
+
+  const handleSubscribe = (e) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValidEmail = emailPattern.test(email);
+
+    if (!isValidEmail) {
+      setErrorMessage("Please enter a valid email address!");
+    } else {
+      setEmail(e.target.value);
+      setErrorMessage("Your subscription request has been received");
+      // Abonelik işlemi için yapılacak diğer işlemleri buraya ekleyin
+    }
+  };
+
   return (
     <div>
       <div className="bg-[#FAFAFA] flex justify-between">
@@ -21,6 +43,64 @@ export default function Footer() {
               <img src={Twitter} alt="Instagram" className="mr-4 ml-4" />
             </a>
           </div>
+        </div>
+      </div>
+
+      <div className="flex ml-28 mt-16 text-[17px]">
+        <div className="mr-8">
+          <strong>Company Info</strong>
+          <ul className="mt-4 footer-list">
+            <li>About</li>
+            <li>Carrier</li>
+            <li>We are hiring</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        <div className="ml-8">
+          <strong>Legal</strong>
+          <ul className="mt-4 footer-list">
+            <li>About</li>
+            <li>Carrier</li>
+            <li>We are hiring</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        <div className="ml-24">
+          <strong>Features</strong>
+          <ul className="mt-4 footer-list">
+            <li>Business Marketing</li>
+            <li>User Analytic</li>
+            <li>Live Chat</li>
+            <li>Unlimited Support</li>
+          </ul>
+        </div>
+        <div className="ml-20">
+          <strong>Resources</strong>
+          <ul className="mt-4 footer-list">
+            <li>IOS & Android</li>
+            <li>Watch a Demo</li>
+            <li>Customers</li>
+            <li>API</li>
+          </ul>
+        </div>
+        <div className="ml-44">
+          <strong>Get In Touch</strong>
+          <div className="flex items-center mt-8">
+            <input
+              type="email"
+              placeholder="Your Email"
+              value={email}
+              onChange={handleInputChange}
+              className="px-4 py-4 border border-gray-300"
+            ></input>
+            <button
+              onClick={handleSubscribe}
+              className="px-4 py-4 border border-[#23A6F0] bg-[#23A6F0] text-white"
+            >
+              Subscribe
+            </button>
+          </div>
+          {errorMessage && <p className="text-red-500 mt-2">{errorMessage}</p>}
         </div>
       </div>
     </div>
