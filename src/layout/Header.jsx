@@ -7,10 +7,10 @@ import {
   faShoppingCart,
   faHeart,
 } from "@fortawesome/free-solid-svg-icons";
-import Instagram from "../assets/Vector-instagram.png";
-import Twitter from "../assets/Vector-twitter.png";
-import Youtube from "../assets/Vector-youtube.png";
-import Facebook from "../assets/Vector-facebook.png";
+import Instagram from "../assets/ıcon/Vector-instagram.png";
+import Twitter from "../assets/ıcon/Vector-twitter.png";
+import Youtube from "../assets/ıcon/Vector-youtube.png";
+import Facebook from "../assets/ıcon/Vector-facebook.png";
 
 export default function Header() {
   return (

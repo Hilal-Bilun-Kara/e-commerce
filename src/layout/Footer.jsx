@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Facebook from "../assets/Vector-facebook-blue.png";
-import Instagram from "../assets/Vector-instagram-blue.png";
-import Twitter from "../assets/Vector-twitter-blue.png";
+import Facebook from "../assets/ıcon/Vector-facebook-blue.png";
+import Instagram from "../assets/ıcon/Vector-instagram-blue.png";
+import Twitter from "../assets/ıcon/Vector-twitter-blue.png";
 
 export default function Footer() {
   const [email, setEmail] = useState("");

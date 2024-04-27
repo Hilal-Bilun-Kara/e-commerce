@@ -99,8 +99,8 @@ function Slider() {
             <div
               key={index}
               onClick={() => btn(index)}
-              className={`bg-white w-20 h-2 ${
-                index === activeIndex ? "bg-blue-500" : ""
+              className={`g-opacity-25 border border-gray-300 border-opacity-50 w-20 h-2 ${
+                index === activeIndex ? "bg-white" : ""
               }`}
             ></div>
           );
