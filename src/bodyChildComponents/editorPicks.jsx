@@ -14,15 +14,23 @@ export function EditorPicks() {
       </p>
       <div className="flex mt-[5%]">
         <div className="relative">
-          <img src={Men} className="mr-8 ml-32" />
+          <a href="/men">
+            <img src={Men} className="mr-8 ml-32" alt="Men" />
+          </a>
         </div>
-        <img src={Women} className="mr-8" />
+        <a href="/women">
+          <img src={Women} className="mr-8" />
+        </a>
         <div>
           <div>
-            <img src={Accessories} className="mb-4" />
+            <a href="/accessories">
+              <img src={Accessories} className="mb-4" />
+            </a>
           </div>
           <div>
-            <img src={Kids} />
+            <a href="/kids">
+              <img src={Kids} />
+            </a>
           </div>
         </div>
       </div>
