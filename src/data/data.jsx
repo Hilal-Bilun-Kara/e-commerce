@@ -11,7 +11,6 @@ export const data = {
       facebook: "https://www.facebook.com",
       twitter: "https://www.twitter.com",
     },
-    firmName: "PiggyBank",
   },
   home: {
     heroWomen: {
@@ -131,8 +130,8 @@ export const data = {
       },
     ],
     footer: {
-      title: "PinkyPiggy",
-      content: "Made With Love By Finland All Right Reserved",
+      title: "Bandage",
+      content: "Made With Love Hilal Bilun Kara All Right Reserved",
       buttonTitle: "Get In Touch",
       buttonContext: "Your Email",
       buttonText: "Subscribe",
