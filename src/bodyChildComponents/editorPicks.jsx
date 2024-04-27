@@ -5,11 +5,9 @@ export function EditorPicks() {
   return (
     <div className="mt-[55%]">
       <h1 className="text-center text-3xl text-[#252B42] font-bold mb-[10px]">
-        EDITOR’S PICK
+        {categories.h3}
       </h1>
-      <p className="text-[#737373] text-[20px] text-center">
-        Problems trying to resolve the conflict between
-      </p>
+      <p className="text-[#737373] text-[20px] text-center">{categories.p}</p>
       <div className="flex mt-[5%]">
         <div className="relative">
           <a href="/men">

@@ -11,43 +11,46 @@ import Instagram from "../assets/ıcon/Vector-instagram.png";
 import Twitter from "../assets/ıcon/Vector-twitter.png";
 import Youtube from "../assets/ıcon/Vector-youtube.png";
 import Facebook from "../assets/ıcon/Vector-facebook.png";
+import { data } from "../data/data.jsx";
 
 export default function Header() {
+  const { phone, mail, message, socialsURL } = data.header;
+
   return (
     <div>
       <div className="flex justify-between mx-0 bg-[#252B42] text-white">
         <div className="flex">
           <a href="tel:+12255550118" className="mx-4">
-            <FontAwesomeIcon icon={faPhone} /> (225) 555-0118
+            <FontAwesomeIcon icon={faPhone} /> {phone}
           </a>
           <a
             href="mailto:michela.zivera@example.com"
             className="mx-4 flex items-center"
           >
             <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-            michela.zivera@example.com
+            {mail}
           </a>
         </div>
 
         <div className="flex ml-2">
-          <p>Follow Us and get a chance to win 80% off</p>
+          <p>{message}</p>
         </div>
 
         <div className="flex text-white items-center">
           <p>Follow Us : </p>
-          <a href="https://www.instagram.com/">
+          <a href={socialsURL.instagram}>
             <img src={Instagram} alt="Instagram" className="mr-2 ml-2" />
           </a>
 
-          <a href="https://www.youtube.com/">
+          <a href={socialsURL.youtube}>
             <img src={Youtube} alt="Instagram" className="mr-2 ml-2" />
           </a>
 
-          <a href="https://www.facebook.com/">
+          <a href={socialsURL.facebook}>
             <img src={Facebook} alt="Instagram" className="mr-2 ml-2" />
           </a>
 
-          <a href="https://twitter.com/" className="text-white">
+          <a href={socialsURL.twitter} className="text-white">
             <img src={Twitter} alt="Instagram" className="mr-2 ml-2" />
           </a>
         </div>
