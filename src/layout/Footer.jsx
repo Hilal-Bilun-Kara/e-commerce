@@ -1,99 +1,79 @@
-import { useState } from "react";
-import Facebook from "../assets/ıcon/Vector-facebook-blue.png";
-import Instagram from "../assets/ıcon/Vector-instagram-blue.png";
-import Twitter from "../assets/ıcon/Vector-twitter-blue.png";
-import { data } from "../data/data.jsx";
+import {
+  faFacebook,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { data } from "../data/data";
 
 export default function Footer() {
-  const { footer } = data.home;
-  const { sections } = data.home.footer;
-
-  const [email, setEmail] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const handleInputChange = (event) => {
-    setEmail(event.target.value);
-    setErrorMessage(""); // Her input değişikliğinde hata mesajını temizle
-  };
-
-  const handleSubscribe = (e) => {
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const isValidEmail = emailPattern.test(email);
-
-    if (!isValidEmail) {
-      setErrorMessage("Please enter a valid email address!");
-    } else {
-      setEmail(e.target.value);
-      setErrorMessage("Your subscription request has been received");
-    }
-  };
+  const {
+    title,
+    sections,
+    buttonTitle,
+    buttonContext,
+    buttonText,
+    inputSubText,
+    content,
+  } = data.home.footer;
 
   return (
-    <div className="mt-[8%]">
-      <div className="bg-[#FAFAFA] flex justify-between">
-        <div className="flex">
-          <p className="text-[#252B42] text-[20px] font-bold mt-[30px] mb-[30px] mx-28 flex items-center">
-            {footer.title}
-          </p>
-          <div className="flex text-[#252B42] items-center ml-[150%] ">
-            <a href="https://www.facebook.com/" className="mr-4">
-              <img src={Facebook} alt="Instagram" className="mr-4 ml-4" />
-            </a>
-            <a href="https://www.instagram.com/" className="mr-4">
-              <img src={Instagram} alt="Instagram" className="mr-4 ml-4" />
-            </a>
-            <a href="https://twitter.com/" className="mr-4">
-              <img src={Twitter} alt="Instagram" className="mr-4 ml-4" />
-            </a>
+    <div className="bg-[#FAFAFA]">
+      <div className="mx-auto px-[10%]">
+        <div className="flex md:flex-row justify-between md:items-center py-4">
+          <h3 className="font-bold text-2xl text-gray-800 my-auto">{title}</h3>
+          <div className="text-sky-500 flex gap-3">
+            <FontAwesomeIcon icon={faFacebook} size="lg" className="p-1" />
+            <FontAwesomeIcon icon={faInstagram} size="lg" className="p-1" />
+            <FontAwesomeIcon icon={faTwitter} size="lg" className="p-1" />
           </div>
         </div>
-      </div>
-
-      <div className="flex ml-12 mt-16 text-[17px]">
-        <div className="flex mt-2 text-[17px]">
+        <hr className="border border-[#E6E6E6]"></hr>
+        <div className="flex md:flex-col gap-5  sm:flex-row justify-between flex-wrap py-5">
           {sections.map((section, index) => (
-            <div
-              key={index}
-              className={`ml-${
-                index === sections.length - 1 ? "60" : index === 2 ? "40" : "16"
-              }`}
-            >
-              <strong>{section.title}</strong>
-              <ul className="mt-4 footer-list">
+            <div key={index} className="flex flex-col gap-2 ">
+              <h5 className="text-gray-800 text-base font-bold ">
+                {section.title}
+              </h5>
+              <div className="flex flex-col gap-2">
                 {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>{link}</li>
+                  <div
+                    key={linkIndex}
+                    className="text-gray-500 text-sm items-left font-bold no-underline"
+                  >
+                    {link}
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
-        </div>
-        <div className="ml-40">
-          <strong>{footer.buttonTitle}</strong>
-          <div className="flex items-center mt-8">
-            <input
-              type="email"
-              placeholder={footer.buttonContext}
-              value={email}
-              onChange={handleInputChange}
-              className="px-4 py-4 border border-gray-300"
-            ></input>
-            <button
-              onClick={handleSubscribe}
-              className="px-4 py-4 border border-[#23A6F0] bg-[#23A6F0] text-white"
-            >
-              {footer.buttonText}
-            </button>
+          <div className="flex flex-col gap-4">
+            <h5 className="text-gray-800 text-base font-bold">{buttonTitle}</h5>
+            <div className="flex flex-col items-start">
+              <div className="flex items-center">
+                <input
+                  type="text"
+                  placeholder={buttonContext}
+                  className="p-2.5 border rounded-l-md text-gray-500 font-normal bg-gray-50"
+                />
+                <button
+                  type="submit"
+                  className="p-2.5 border border-gray-200 bg-sky-500 text-white rounded-r-md"
+                >
+                  {buttonText}
+                </button>
+              </div>
+              <p className="text-gray-500 text-xs font-normal mt-1">
+                {inputSubText}
+              </p>
+            </div>
           </div>
-          {errorMessage && <p className="text-red-500 mt-2">{errorMessage}</p>}
         </div>
       </div>
-
-      <div className="bg-[#FAFAFA] flex justify-between">
-        <div className="flex">
-          <p className="text-[#737373] text-[15px] font-bold mt-[20px] mb-[20px] mx-28 flex items-center">
-            {footer.content}{" "}
-          </p>
-        </div>
+      <div className="py-4 bg-gray-100 collection-text">
+        <h6 className="font-bold text-sm text-gray-500 mx-auto px-[10%]">
+          {content}
+        </h6>
       </div>
     </div>
   );

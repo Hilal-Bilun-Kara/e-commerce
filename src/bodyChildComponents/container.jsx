@@ -4,14 +4,14 @@ export default function Container() {
   const { containerFluid } = data.home;
 
   return (
-    <div className=" w-full flex pt-1 gap-3 mt-[35%]">
-      <div className="flex justify-end items-end">
+    <div className=" w-full flex md:grid sm:flex-row pt-1 gap-3 mt-[35%] md:ml-16 md:mb-24">
+      <div className="flex justify-end items-end md:ml-4">
         <img
           src={containerFluid.src}
-          className="w-[600px] mt-[30%] mr-24 ml-24 h-[600px]  "
+          className="w-[600px] mt-[30%] mr-24 ml-24 h-[600px] md:w-[400px] md:h-[400px]"
         />
       </div>
-      <div className=" flex items-center mt-[15%]">
+      <div className=" flex items-center mt-[15%] ">
         <div className="w-[400px] flex flex-col gap-4 pr-10  collection-text">
           <h5 className="text-[#BDBDBD] text-base font-bold  ">
             {containerFluid.h5}

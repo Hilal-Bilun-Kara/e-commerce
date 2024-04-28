@@ -28,9 +28,10 @@ const items = [
     season: "SUMMER 2020",
   },
 ];
-function Slide({ src, caption, buttonText, description, season, price }) {
+
+function Slide({ src, caption, buttonText, description, season }) {
   return (
-    <div className="relative w-full mt-[3%]">
+    <div className="relative w-full mt-[90%]">
       <img src={src} className="w-full" alt="Slider Image" />
       <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white">
         <p className="text-l font-bold mr-[72%] mt-[5%] mb-[10px]">{season}</p>{" "}
@@ -90,18 +91,18 @@ function SliderMan() {
         </div>
       ))}
       <button
-        className="absolute top-80 left-[70px] transform -translate-y-1/2 text-white p-2 rounded-full mt-[5%]"
+        className="absolute top-80 left-[70px] transform -translate-y-1/2 text-white p-2 rounded-full mt-[90%]"
         onClick={previous}
       >
         <img src={Left} alt="Left Arrow" />
       </button>
       <button
-        className="absolute top-80 right-[70px] transform -translate-y-1/2  text-white p-2 rounded-full mt-[5%]"
+        className="absolute top-80 right-[70px] transform -translate-y-1/2  text-white p-2 rounded-full mt-[90%]"
         onClick={next}
       >
         <img src={Right} alt="Right Arrow" />
       </button>
-      <div className="flex absolute bottom-[30px] left-0 right-0 justify-center">
+      <div className="flex absolute mt-[180%] left-0 right-0 justify-center">
         {items.map((item, index) => {
           return (
             <div
@@ -117,5 +118,4 @@ function SliderMan() {
     </div>
   );
 }
-
 export default SliderMan;

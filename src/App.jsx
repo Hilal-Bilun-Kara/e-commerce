@@ -6,12 +6,12 @@ import Header from "./layout/Header";
 
 import { BestSeller } from "./bodyChildComponents/bestSellerProducts";
 import { EditorPicks } from "./bodyChildComponents/editorPicks";
-import { SliderMan } from "./layout/SliderMan";
 
 import Container from "./bodyChildComponents/container";
 
 import SliderWoman from "./layout/SliderWoman";
 import FeaturedPost from "./bodyChildComponents/featuredPost";
+import SliderMan from "./layout/SliderMan";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
       <Header />
       <SliderWoman />
       <EditorPicks />
+
       <BestSeller />
       <SliderMan />
       <Container />
