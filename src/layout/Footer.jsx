@@ -29,7 +29,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="mt-[100%]">
+    <div className="mt-[8%]">
       <div className="bg-[#FAFAFA] flex justify-between">
         <div className="flex">
           <p className="text-[#252B42] text-[20px] font-bold mt-[30px] mb-[30px] mx-28 flex items-center">

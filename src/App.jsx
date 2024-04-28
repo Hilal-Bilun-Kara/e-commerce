@@ -3,19 +3,26 @@ import "./App.css";
 
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
-import Slider from "./layout/Slider";
+
 import { BestSeller } from "./bodyChildComponents/bestSellerProducts";
 import { EditorPicks } from "./bodyChildComponents/editorPicks";
+
 import Container from "./bodyChildComponents/container";
+
+import SliderMan from "./layout/SliderMan";
+import SliderWoman from "./layout/SliderWoman";
+import FeaturedPost from "./bodyChildComponents/featuredPost";
 
 function App() {
   return (
     <>
       <Header />
-      <Slider />
+      <SliderWoman />
       <EditorPicks />
       <BestSeller />
+      <SliderMan />
       <Container />
+      <FeaturedPost />
       <Footer />
     </>
   );

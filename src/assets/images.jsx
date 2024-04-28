@@ -1,6 +1,7 @@
-import heroWomenOne from "./home/heroWomen/heroSummer.jpeg";
-import heroWomenTwo from "./home/heroWomen/heroWinter.jpeg";
-import heroman from "./home/heroMan/heroman.png";
+import heroWomenOne from "../assets/home/heroWomen/heroSummer.jpeg";
+import heroWomenTwo from "../assets/home/heroWomen/heroWinter.jpeg";
+import heroManBg from "../assets/home/heroMan/shop-hero-2-product-slide-2.jpg";
+import heroman from "../assets/home/heroMan/heroman.png";
 import containerfluid from "./home/containerFluid/containerfluid.png";
 import man from "./home/categories/men.png";
 import woman from "./home/categories/women.png";
@@ -18,9 +19,9 @@ import productOne from "./home/bestSellers/product-1.jpeg";
 import productTwo from "./home/bestSellers/product-2.jpeg";
 import productThree from "./home/bestSellers/product-3.jpeg";
 import productFour from "./home/bestSellers/product-4.jpeg";
-import imageFeaturedOne from "./home/featuredPosts/imageOne.jpeg";
-import imageFeaturedTwo from "./home/featuredPosts/imageTwo.jpeg";
-import imageFeaturedThree from "./home/featuredPosts/imageThree.jpeg";
+import imageFeaturedOne from "../assets/home/featuredPosts/imageOne.jpeg";
+import imageFeaturedTwo from "../assets/home/featuredPosts/imageTwo.jpeg";
+import imageFeaturedThree from "../assets/home/featuredPosts/imageThree.jpeg";
 import aboutImage from "./about/page/aboutImage.png";
 import video from "./about/page/video.jpeg";
 import teamContainerOne from "./about/team/teamContainerOne.jpeg";
@@ -64,6 +65,7 @@ export const images = {
     },
     heroMan: {
       heroman,
+      heroManBg,
     },
     containerFluid: {
       containerfluid,

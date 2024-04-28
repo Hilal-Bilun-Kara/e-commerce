@@ -4,7 +4,7 @@ export default function Container() {
   const { containerFluid } = data.home;
 
   return (
-    <div className=" w-full flex pt-1 gap-3">
+    <div className=" w-full flex pt-1 gap-3 mt-[35%]">
       <div className="flex justify-end items-end">
         <img
           src={containerFluid.src}
