@@ -6,10 +6,10 @@ import Header from "./layout/Header";
 
 import { BestSeller } from "./bodyChildComponents/bestSellerProducts";
 import { EditorPicks } from "./bodyChildComponents/editorPicks";
+import { SliderMan } from "./layout/SliderMan";
 
 import Container from "./bodyChildComponents/container";
 
-import SliderMan from "./layout/SliderMan";
 import SliderWoman from "./layout/SliderWoman";
 import FeaturedPost from "./bodyChildComponents/featuredPost";
 

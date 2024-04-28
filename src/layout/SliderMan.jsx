@@ -28,7 +28,6 @@ const items = [
     season: "SUMMER 2020",
   },
 ];
-
 function Slide({ src, caption, buttonText, description, season, price }) {
   return (
     <div className="relative w-full mt-[3%]">
@@ -73,7 +72,7 @@ function SliderMan() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative w-full h-[1230px] flex flex-col items-center justify-center">
       {items.map((item, index) => (
         <div
           key={index}
@@ -102,7 +101,7 @@ function SliderMan() {
       >
         <img src={Right} alt="Right Arrow" />
       </button>
-      <div className="flex absolute top-[100vh] left-[44%] gap-3 mt-[3%]">
+      <div className="flex absolute bottom-[30px] left-0 right-0 justify-center">
         {items.map((item, index) => {
           return (
             <div
