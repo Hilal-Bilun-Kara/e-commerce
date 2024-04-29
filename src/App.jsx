@@ -9,7 +9,7 @@ import { EditorPicks } from "./bodyChildComponents/editorPicks";
 
 import Container from "./bodyChildComponents/container";
 
-import SliderWoman from "./layout/SliderWoman";
+import Slider from "./layout/Slider";
 import FeaturedPost from "./bodyChildComponents/featuredPost";
 import SliderMan from "./layout/SliderMan";
 
@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       <Header />
-      <SliderWoman />
+      <Slider />
       <EditorPicks />
 
       <BestSeller />

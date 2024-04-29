@@ -75,12 +75,13 @@ function Header() {
               </Link>
             </div>
 
-            <div className="flex gap-[1rem] font-bold text-[#737373] text-sm ml-20 mr-[500px] md:ml-0 md:flex-col md:w-full md:items-center md:text-xl md:order-last md:mb-12 items-center md:hidden">
+            <div className="flex gap-[1rem] font-bold text-[#737373] text-sm ml-20 mr-[400px] md:ml-0 md:flex-col md:w-full md:items-center md:text-xl md:order-last md:mb-12 items-center md:hidden">
               <Link to={"/"}>Home</Link>
               <span>Shop</span>
               <Link to={"/about"}>About</Link>
+              <Link to={"/blog"}>Blog</Link>
               <Link to={"/contact"}>Contact</Link>
-              {/* <Link to={"/product"}>Pages</Link> */}
+              <Link to={"/product"}>Pages</Link>
             </div>
           </div>
           {/* Mobil ekran da burger menuye tıklandığın da, headerın açılıp/kapanması.*/}
