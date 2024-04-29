@@ -31,7 +31,7 @@ function SliderBottom() {
     return () => clearTimeout(timer);
   }, [currentIndex]);
   return (
-    <div className="relative top-100">
+    <div className="relative top-100 mt-[5%]">
       <div className="overflow-hidden max-h-[716px] h-screen ">
         {slides.map((slide, index) => (
           <img

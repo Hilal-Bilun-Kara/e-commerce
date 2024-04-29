@@ -4,11 +4,11 @@ export function EditorPicks() {
   const { categories } = data.home;
   return (
     <div className="mt-[10%] ">
-      <h1 className="text-center text-3xl text-[#252B42] font-bold mb-[10px]">
+      <h1 className="text-center text-3xl text-[#252B42] font-bold mb-[5px]">
         {categories.h3}
       </h1>
       <p className="text-[#737373] text-[20px] text-center">{categories.p}</p>
-      <div className="flex md:flex-col md:items-center  mt-[5%]">
+      <div className="flex md:flex-col md:items-center mt-[3%]">
         <div className="relative">
           <a href="/men">
             <img
