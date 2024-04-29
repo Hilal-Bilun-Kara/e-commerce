@@ -30,11 +30,15 @@ const items = [
 
 function Slide({ src, caption, buttonText, description, season }) {
   return (
-    <div className="relative w-full">
-      <img src={src} className="w-full" alt="Slider Image" />
+    <div className="relative w-full md:w-[600px] md:h-[700px] md:mb-[10%] md:items-center md:ml-12">
+      <img
+        src={src}
+        className="w-full md:w-[550px] md:h-[600px] md:mr-24"
+        alt="Slider Image"
+      />
       <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white">
         <p className="text-l font-bold mr-[70%] mt-[5%] mb-[10px]">{season}</p>{" "}
-        <h1 className="text-6xl font-bold mr-[40%] ">{caption}</h1>
+        <h1 className="text-6xl md:text-xl font-bold mr-[40%] ">{caption}</h1>
         <p className="text-m mr-[45%] mt-[10px] whitespace-pre-line">
           {description}
         </p>
@@ -93,7 +97,7 @@ function SliderWoman() {
       >
         <img src={Right} alt="Right Arrow" />
       </button>
-      <div className="flex absolute top-[100vh] left-[44%] gap-3">
+      <div className="flex absolute top-[100vh] left-[44%] gap-3 md:top-[130vh] md:left-[35%]">
         {items.map((item, index) => {
           return (
             <div
