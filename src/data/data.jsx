@@ -3,7 +3,7 @@ import { images } from "../assets/images";
 export const data = {
   header: {
     phone: "(225) 555-0118",
-    mail: "michelle.rivera@example.com",
+    mail: "hilalbilunkara@hotmail.com",
     message: "Follow Us and get a chance to win 80% off",
     socialsURL: {
       instagram: "https://www.instagram.com/",
@@ -46,7 +46,8 @@ export const data = {
           price: "$16.48",
           altText: "SUMMER 2020 Products",
           caption: "SUMMER 2020",
-          src: images.home.heroMan.heroManBg,
+          src: images.home.heroMan.heroManOne,
+          src1: images.home.heroMan.heroMan,
           key: 1,
           buttonText: "SHOP NOW",
         },
@@ -57,7 +58,8 @@ export const data = {
           price: "$16.48",
           altText: "SUMMER 2020 Products",
           caption: "SUMMER 2020",
-          src: images.home.heroMan.heroManBg,
+          src: images.home.heroMan.heroManOne,
+          src1: images.home.heroMan.heroMan,
           key: 2,
           buttonText: "SHOP NOW",
         },

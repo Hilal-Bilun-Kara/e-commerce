@@ -3,7 +3,7 @@ import { data } from "../data/data.jsx";
 export function EditorPicks() {
   const { categories } = data.home;
   return (
-    <div className="mt-[55%] md:mt-[140%]">
+    <div className="mt-[10%] ">
       <h1 className="text-center text-3xl text-[#252B42] font-bold mb-[10px]">
         {categories.h3}
       </h1>

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { data } from "../data/data.jsx";
+import heroMan from "../assets/home/heroMan/heroman.png";
 
-function Slider() {
-  const { slides } = data.home.heroWomen;
+function SliderBottom() {
+  const { slides } = data.home.heroMan;
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -30,7 +31,7 @@ function Slider() {
     return () => clearTimeout(timer);
   }, [currentIndex]);
   return (
-    <div className="relative ">
+    <div className="relative top-100">
       <div className="overflow-hidden max-h-[716px] h-screen ">
         {slides.map((slide, index) => (
           <img
@@ -42,6 +43,13 @@ function Slider() {
             }`}
           />
         ))}
+      </div>
+      <div className="absolute top-10 right-24">
+        <img
+          src={heroMan}
+          alt="Your Image"
+          className="w-80 h-108 md:w-60 md:h-80 md:hidden"
+        />
       </div>
       <div className="absolute top-40 left-36  md:top-20 md:left-0 flex max-w-[1044px] max-h-[680px] w-full h-full slides-center ">
         <div className="flex flex-col gap-8 md:items-center md:mx-auto">
@@ -96,4 +104,4 @@ function Slider() {
   );
 }
 
-export default Slider;
+export default SliderBottom;

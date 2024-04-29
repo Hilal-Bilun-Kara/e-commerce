@@ -1,7 +1,7 @@
 import heroWomenOne from "../assets/home/heroWomen/heroSummer.jpeg";
 import heroWomenTwo from "../assets/home/heroWomen/heroWinter.jpeg";
-import heroManBg from "../assets/home/heroMan/shop-hero-2-product-slide-2.jpg";
-import heroman from "../assets/home/heroMan/heroman.png";
+import heroManOne from "../assets/home/heroMan/shop-hero-2-product-slide-2.jpg";
+import heroMan from "../assets/home/heroMan/heroman.png";
 import containerfluid from "./home/containerFluid/containerfluid.png";
 import man from "./home/categories/men.png";
 import woman from "./home/categories/women.png";
@@ -47,14 +47,14 @@ import womanCategoryFive from "./shop/woman-category-5.png";
 import productSliderOne from "./productPage/product-1.jpeg";
 import productSliderTwo from "./productPage/product-2.jpeg";
 import productDetail from "./productPage/product-3.jpeg";
-import productPageCardOne from "./productPage/productList/product-page-11.jpeg";
-import productPageCardTwo from "./productPage/productList/product-page-22.jpeg";
-import productPageCardThree from "./productPage/productList/product-page-33.jpeg";
-import productPageCardFour from "./productPage/productList/product-page-44.jpeg";
-import productPageCardFive from "./productPage/productList/product-page-55.jpeg";
-import productPageCardSix from "./productPage/productList/product-page-66.jpeg";
-import productPageCardSeven from "./productPage/productList/product-page-77.jpeg";
-import productPageCardEight from "./productPage/productList/product-page-88.jpeg";
+import productPageCardOne from "../assets/productPage/productList/product-cover-1.jpg";
+import productPageCardTwo from "../assets/productPage/productList/product-cover-2.jpg";
+import productPageCardThree from "../assets/productPage/productList/product-cover-3.jpg";
+import productPageCardFour from "../assets/productPage/productList/product-cover-4.jpg";
+import productPageCardFive from "../assets/productPage/productList/product-cover-5.jpg";
+import productPageCardSix from "../assets/productPage/productList/product-cover-6.jpg";
+import productPageCardSeven from "../assets/productPage/productList/product-cover-7.jpg";
+import productPageCardEight from "../assets/productPage/productList/product-cover-8.jpg";
 import contactImageFamily from "./contact/contactImage.png";
 
 export const images = {
@@ -64,8 +64,8 @@ export const images = {
       heroWomenTwo,
     },
     heroMan: {
-      heroman,
-      heroManBg,
+      heroManOne,
+      heroMan,
     },
     containerFluid: {
       containerfluid,
