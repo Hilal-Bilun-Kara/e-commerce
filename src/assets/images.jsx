@@ -55,6 +55,16 @@ import productPageCardFive from "../assets/productPage/productList/product-cover
 import productPageCardSix from "../assets/productPage/productList/product-cover-6.jpg";
 import productPageCardSeven from "../assets/productPage/productList/product-cover-7.jpg";
 import productPageCardEight from "../assets/productPage/productList/product-cover-8.jpg";
+
+import productKitchenOne from "../assets/productPage/productList/product-page-11.jpeg";
+import productKitchenTwo from "../assets/productPage/productList/product-page-22.jpeg";
+import productKitchenThree from "../assets/productPage/productList/product-page-33.jpeg";
+import productKitchenFour from "../assets/productPage/productList/product-page-44.jpeg";
+import productKitchenFive from "../assets/productPage/productList/product-page-55.jpeg";
+import productKitchenSix from "../assets/productPage/productList/product-page-66.jpeg";
+import productKitchenSeven from "../assets/productPage/productList/product-page-77.jpeg";
+import productKitchenEight from "../assets/productPage/productList/product-page-88.jpeg";
+
 import contactImageFamily from "./contact/contactImage.png";
 
 export const images = {
@@ -148,6 +158,16 @@ export const images = {
     productPageCardSix,
     productPageCardSeven,
     productPageCardEight,
+  },
+  productDetailPageCard: {
+    productKitchenOne,
+    productKitchenTwo,
+    productKitchenThree,
+    productKitchenFour,
+    productKitchenFive,
+    productKitchenSix,
+    productKitchenSeven,
+    productKitchenEight,
   },
   contact: {
     contactImageFamily,

@@ -10,6 +10,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { data } from "../data/data.jsx";
 import React, { useState } from "react";
+import ProductCard from "../components/ProductCard.jsx";
+import Customer from "../layout/Customer.jsx";
 
 export function ShopPage() {
   const {
@@ -21,6 +23,7 @@ export function ShopPage() {
     reviews,
     descriptionShort,
   } = data.productPage;
+  const { productDetailCards } = data.productDetailPageCards;
 
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
@@ -165,10 +168,10 @@ export function ShopPage() {
           </p>
           <div className="w-full border-t border-[#ECECEC] mb-4"></div>
           <div className="flex gap-2">
-            <div className="w-[30px] h-[30px] bg-sky-500 rounded-full shadow-sm hover:bg-sky-200 cursor-pointer" />
-            <div className="w-[30px] h-[30px] bg-green-500 rounded-full shadow-sm hover:bg-green-200 cursor-pointer" />
-            <div className="w-[30px] h-[30px] bg-orange-400 rounded-full shadow-sm hover:bg-orange-200 cursor-pointer" />
-            <div className="w-[30px] h-[30px] bg-slate-800 rounded-full shadow-sm hover:bg-slate-200 cursor-pointer" />
+            <div className="product-detail-color bg-sky-500  hover:bg-sky-200 " />
+            <div className="product-detail-color bg-green-500  hover:bg-green-200 " />
+            <div className="product-detail-color bg-orange-400  hover:bg-orange-200 " />
+            <div className="product-detail-color bg-slate-800  hover:bg-slate-200 " />
           </div>
           <div className="flex gap-2 mt-[19%] sm:mb-[20%] md:mb-[20%]">
             <button className="text-white text-sm font-bold border-radius-[10px] rounded-sm bg-sky-500 px-[15px] py-[8px] sm:px-[30px] sm:py-[5px] hover:scale-105">
@@ -199,25 +202,25 @@ export function ShopPage() {
           </div>
         </div>
       </div>
-      <div className="">
+      <div>
         {/* NavLinks */}
-        <nav className="flex justify-center gap-8 ">
+        <nav className="flex justify-center gap-8">
           <p className="navBar-product">Description</p>
           <p className="navBar-product">Additional Information</p>
           <p className="navBar-product ">
             Reviews<span className="text-[#23856D] font-bold pl-1">(0)</span>
           </p>
         </nav>
-        <hr className="border border-gray-200 " />
+        <hr className="border border-gray-200 mt-[3%]" />
       </div>
-      <div className="flex  flex-col sm:flex-row justify-between gap-[30px]">
-        <div className="w-[99%] sm:w-[45%] relative bg-gray-100 rounded-md">
+      <div className="flex sm:flex-col sm:flex-row justify-between gap-[30px] sm:mt-[5%]">
+        <div className="w-[99%] sm:w-[80%] relative bg-gray-100 rounded-md">
           <img
             className="w-[500px] h-[400px] rounded-md shadow-lg sm:absolute top-0 left-0 object-cover"
             src={detailImage}
           />
         </div>
-        <div className="sm:w-[30%] w-[99%] flex flex-col gap-[30px] ">
+        <div className="sm:w-[80%] md:w-[80%] w-[99%] flex flex-col gap-[30px] sm:mt-[110%]">
           <h5 className=" text-slate-800 text-2xl font-bold tracking-tight">
             the quick fox jumps over
           </h5>
@@ -237,7 +240,7 @@ export function ShopPage() {
             consequent sent nostrum met.
           </h6>
         </div>
-        <div className="flex flex-col w-[99%] sm:w-[30%] gap-6">
+        <div className="flex flex-col w-[99%] sm:w-[80%] gap-6">
           <div className="flex flex-col gap-4">
             <h5 className=" text-slate-800 text-2xl font-bold tracking-tight">
               the quick fox jumps over
@@ -323,6 +326,20 @@ export function ShopPage() {
             </div>
           </div>
         </div>
+      </div>
+      <h3 className="text-slate-800 ml-6 text-2xl font-bold tracking-tight mt-[5%] sm:mt-[10%] md:mt-[10%]">
+        BESTSELLER PRODUCTS
+      </h3>
+      <hr className=" border border-gray-200" />
+      <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 gap-6 ml-16 md:mr-12 mt-[5%] md:mt-[5%]">
+        {productDetailCards.map((item, index) => (
+          <div key={index} className="flex flex-row max-w-60 md:mx-auto mb-5">
+            <ProductCard data={item} key={index} />
+          </div>
+        ))}
+      </div>{" "}
+      <div>
+        <Customer />
       </div>
     </div>
   );
