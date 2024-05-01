@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function ProductCard({ data }) {
   return (

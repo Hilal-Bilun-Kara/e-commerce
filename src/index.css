@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  height: 100%;
+}
+
 @layer components {
   .header-shopping-icon {
     @apply text-[#00A1C1] hover:text-gray-300 mr-4;
@@ -12,5 +17,20 @@
   }
   .custom-box-shadow {
     box-shadow: 0px 2px 0px rgba(128, 128, 128, 0.5); /* Gri gölge */
+  }
+  .productIcon {
+    @apply flex justify-center items-center rounded-full border border-[#E8E8E8] w-10;
+  }
+  .quick-div {
+    @apply flex items-center justify-start gap-4 mb-2;
+  }
+  .navBar-product {
+    @apply text-[#737373] text-sm font-bold no-underline;
+  }
+  .product-h6 {
+    @apply text-[#737373] w-[80%]  text-sm font-normal leading-tight tracking-tight;
+  }
+  .product-detail-color {
+    @apply w-[30px] h-[30px]  rounded-full shadow-sm hover:bg-sky-200 cursor-pointer;
   }
 }
