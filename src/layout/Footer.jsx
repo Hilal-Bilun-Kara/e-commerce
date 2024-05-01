@@ -5,8 +5,30 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { data } from "../data/data";
+import { useState } from "react";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleInputChange = (event) => {
+    setEmail(event.target.value);
+    setErrorMessage(""); // Her input değişikliğinde hata mesajını temizle
+  };
+
+  const handleSubscribe = (e) => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValidEmail = emailPattern.test(email);
+
+    if (!isValidEmail) {
+      setErrorMessage("Please enter a valid email address!");
+    } else {
+      setEmail(e.target.value);
+      setErrorMessage("Your subscription request has been received");
+      // Abonelik işlemi için yapılacak diğer işlemleri buraya ekleyin
+    }
+  };
+
   const {
     title,
     sections,
@@ -52,20 +74,28 @@ export default function Footer() {
             <div className="flex flex-col items-start">
               <div className="flex items-center">
                 <input
-                  type="text"
+                  type="email"
                   placeholder={buttonContext}
+                  onChange={handleInputChange}
                   className="p-2.5 border rounded-l-md text-gray-500 font-normal bg-gray-50"
                 />
                 <button
+                  onClick={handleSubscribe}
                   type="submit"
                   className="p-2.5 border border-gray-200 bg-sky-500 text-white rounded-r-md"
                 >
                   {buttonText}
                 </button>
               </div>
-              <p className="text-gray-500 text-xs font-normal mt-1">
-                {inputSubText}
-              </p>
+              {errorMessage && (
+                <p
+                  className={`mt-2 ${
+                    errorMessage ? "text-red-500" : "text-blue-500"
+                  }`}
+                >
+                  {errorMessage}
+                </p>
+              )}
             </div>
           </div>
         </div>

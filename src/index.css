@@ -13,4 +13,7 @@
   .custom-box-shadow {
     box-shadow: 0px 2px 0px rgba(128, 128, 128, 0.5); /* Gri gölge */
   }
+  .productIcon {
+    @apply flex justify-center items-center rounded-full border border-[#E8E8E8] w-10;
+  }
 }

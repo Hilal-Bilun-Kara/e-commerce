@@ -1,27 +1,27 @@
 import {
+  faCartShopping,
   faChevronLeft,
   faChevronRight,
+  faEye,
+  faHeart,
   faStar,
   faStarHalfStroke,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { data } from "../data/data.jsx";
-import React, { useEffect, useState } from "react";
-import { Carousel, CarouselControl, CarouselItem } from "reactstrap";
-import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import { useDispatch } from "react-redux";
+import React, { useState } from "react";
 
 export function ShopPage() {
   const {
     name,
     availability,
     slides,
-    detailImage,
     price,
-    rate,
+    detailImage,
     reviews,
     descriptionShort,
   } = data.productPage;
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [product, setProduct] = useState({});
@@ -99,7 +99,7 @@ export function ShopPage() {
               </button>
             </div>
           </div>
-          <div className="flex mt-[100%] md:mt-[130%] gap-3">
+          <div className="flex mt-[100%] md:mt-[130%] sm:mt-[130%]gap-3">
             {slides &&
               slides.length > 0 &&
               slides.map((image, index) => (
@@ -169,6 +169,158 @@ export function ShopPage() {
             <div className="w-[30px] h-[30px] bg-green-500 rounded-full shadow-sm hover:bg-green-200 cursor-pointer" />
             <div className="w-[30px] h-[30px] bg-orange-400 rounded-full shadow-sm hover:bg-orange-200 cursor-pointer" />
             <div className="w-[30px] h-[30px] bg-slate-800 rounded-full shadow-sm hover:bg-slate-200 cursor-pointer" />
+          </div>
+          <div className="flex gap-2 mt-[19%] sm:mb-[20%] md:mb-[20%]">
+            <button className="text-white text-sm font-bold border-radius-[10px] rounded-sm bg-sky-500 px-[15px] py-[8px] sm:px-[30px] sm:py-[5px] hover:scale-105">
+              Select Options
+            </button>
+            <div className="flex gap-2 ml-4 cursor-pointer">
+              <div className="productIcon">
+                <FontAwesomeIcon
+                  icon={faHeart}
+                  className="text-[#252B42] hover:text-red-600"
+                />
+              </div>
+              <div className="productIcon">
+                <button>
+                  <FontAwesomeIcon
+                    icon={faCartShopping}
+                    className="text-[#252B42] active:text-sky-500 hover:text-sky-500"
+                  />
+                </button>
+              </div>
+              <div className="productIcon">
+                <FontAwesomeIcon
+                  icon={faEye}
+                  className="text-[#252B42] hover:scale-110"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="">
+        {/* NavLinks */}
+        <nav className="flex justify-center gap-8 ">
+          <p className="navBar-product">Description</p>
+          <p className="navBar-product">Additional Information</p>
+          <p className="navBar-product ">
+            Reviews<span className="text-[#23856D] font-bold pl-1">(0)</span>
+          </p>
+        </nav>
+        <hr className="border border-gray-200 " />
+      </div>
+      <div className="flex  flex-col sm:flex-row justify-between gap-[30px]">
+        <div className="w-[99%] sm:w-[45%] relative bg-gray-100 rounded-md">
+          <img
+            className="w-[500px] h-[400px] rounded-md shadow-lg sm:absolute top-0 left-0 object-cover"
+            src={detailImage}
+          />
+        </div>
+        <div className="sm:w-[30%] w-[99%] flex flex-col gap-[30px] ">
+          <h5 className=" text-slate-800 text-2xl font-bold tracking-tight">
+            the quick fox jumps over
+          </h5>
+          <h6 className="product-h6">
+            Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.
+            RELIT official consequent door ENIM RELIT Mollie. Excitation venial
+            consequent sent nostrum met.
+          </h6>
+          <h6 className="product-h6">
+            Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.
+            RELIT official consequent door ENIM RELIT Mollie. Excitation venial
+            consequent sent nostrum met.
+          </h6>
+          <h6 className="product-h6">
+            Met minim Mollie non desert Alamo est sit cliquey dolor do met sent.
+            RELIT official consequent door ENIM RELIT Mollie. Excitation venial
+            consequent sent nostrum met.
+          </h6>
+        </div>
+        <div className="flex flex-col w-[99%] sm:w-[30%] gap-6">
+          <div className="flex flex-col gap-4">
+            <h5 className=" text-slate-800 text-2xl font-bold tracking-tight">
+              the quick fox jumps over
+            </h5>
+            <div className="flex flex-col gap-2">
+              <div className="quick-div">
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  size="lg"
+                  className="text-gray-300"
+                />
+                <h6 className="quick-product">
+                  the quick fox jumps over the lazy dog
+                </h6>
+              </div>
+              <div className="quick-div">
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  size="lg"
+                  className="text-gray-300"
+                />
+                <h6 className="quick-product">
+                  the quick fox jumps over the lazy dog
+                </h6>
+              </div>
+              <div className="quick-div">
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  size="lg"
+                  className="text-gray-300"
+                />
+                <h6 className="quick-product">
+                  the quick fox jumps over the lazy dog
+                </h6>
+              </div>
+              <div className="quick-div">
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  size="lg"
+                  className="text-gray-300"
+                />
+                <h6 className="quick-product">
+                  the quick fox jumps over the lazy dog
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col gap-6">
+            <h5 className=" text-slate-800 text-2xl font-bold  tracking-tight">
+              the quick fox jumps over
+            </h5>
+            <div className="flex flex-col gap-2">
+              <div className="quick-div">
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  size="lg"
+                  className="text-gray-300"
+                />
+                <h6 className="quick-product">
+                  the quick fox jumps over the lazy dog
+                </h6>
+              </div>
+              <div className="quick-div">
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  size="lg"
+                  className="text-gray-300"
+                />
+                <h6 className="quick-product">
+                  the quick fox jumps over the lazy dog
+                </h6>
+              </div>
+              <div className="quick-div">
+                <FontAwesomeIcon
+                  icon={faChevronRight}
+                  size="lg"
+                  className="text-gray-300"
+                />
+                <h6 className="quick-product">
+                  the quick fox jumps over the lazy dog
+                </h6>
+              </div>
+            </div>
           </div>
         </div>
       </div>
