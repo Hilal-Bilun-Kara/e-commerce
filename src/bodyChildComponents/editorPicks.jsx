@@ -1,4 +1,4 @@
-import { data } from "../data/data.jsx";
+import { data } from "../data/data";
 
 export function EditorPicks() {
   const { categories } = data.home;

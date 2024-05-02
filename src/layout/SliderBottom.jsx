@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { data } from "../data/data.jsx";
+import { data } from "../data/data";
 import heroMan from "../assets/home/heroMan/heroman.png";
 
 function SliderBottom() {

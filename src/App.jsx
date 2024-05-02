@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 
 import { ContextProvider } from "./contexts/dataContext";
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
+import { ProductDetail } from "./pages/ProductDetail";
 import { ShopPage } from "./pages/ShopPage";
 
 function App() {
@@ -22,6 +23,12 @@ function App() {
         <Route path="/shop/:categoryId?/:gender?/:categorySlug?/:offset?">
           <Header />
           <ShopPage />
+          <Footer />
+        </Route>
+
+        <Route path="/product/:gender?/:category?/:id?/:name?" exact>
+          <Header />
+          <ProductDetail />
           <Footer />
         </Route>
       </Switch>
