@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { data } from "../data/data.jsx";
+import { data } from "../data/data";
 
 function Slider() {
   const { slides } = data.home.heroWomen;

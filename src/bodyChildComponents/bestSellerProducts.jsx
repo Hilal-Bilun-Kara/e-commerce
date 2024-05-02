@@ -1,6 +1,6 @@
 import ProductCard from "../components/ProductCard.jsx";
-import { useData } from "../contexts/dataContext.jsx";
-import { data } from "../data/data.jsx";
+
+import { data } from "../data/data";
 
 export function BestSeller() {
   const { bestSellersText } = data.home;

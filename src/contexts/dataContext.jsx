@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import * as data from "../data/data.jsx";
+import * as data from "../data/data";
 const DataContext = createContext();
 
 export const ContextProvider = ({ children }) => {
