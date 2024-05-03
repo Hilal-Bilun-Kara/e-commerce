@@ -9,6 +9,7 @@ import { ContextProvider } from "./contexts/dataContext";
 import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 import { ProductDetail } from "./pages/ProductDetail";
 import { ShopPage } from "./pages/ShopPage";
+import { ContactPage } from "./pages/ContactPage";
 
 function App() {
   return (
@@ -29,6 +30,12 @@ function App() {
         <Route path="/product/:gender?/:category?/:id?/:name?" exact>
           <Header />
           <ProductDetail />
+          <Footer />
+        </Route>
+
+        <Route path="/contact" exact>
+          <Header />
+          <ContactPage />
           <Footer />
         </Route>
       </Switch>
