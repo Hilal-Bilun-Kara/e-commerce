@@ -54,7 +54,8 @@ export function ContactPage() {
           </div>
         </div>
       </div>
-      {/* İkinci section başlangıcı */}
+      {/* İkinci section başlangıcı  
+      ToDo: */}
       <div className=" w-[100%] sm:bg-white items-center justify-center flex flex-col  ">
         <div>
           <div className="flex flex-col justify-center items-center text-center gap-2 mb-5 mr-[25%]">
