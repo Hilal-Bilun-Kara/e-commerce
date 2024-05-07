@@ -10,6 +10,7 @@ import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
 import { ProductDetail } from "./pages/ProductDetail";
 import { ShopPage } from "./pages/ShopPage";
 import { ContactPage } from "./pages/ContactPage";
+import TeamPage from "./pages/TeamPage";
 
 function App() {
   return (
@@ -36,6 +37,12 @@ function App() {
         <Route path="/contact" exact>
           <Header />
           <ContactPage />
+          <Footer />
+        </Route>
+
+        <Route path="/team" exact>
+          <Header />
+          <TeamPage />
           <Footer />
         </Route>
       </Switch>

@@ -529,18 +529,19 @@ export const data = {
     teamCards: [
       {
         img: images.about.teamContainerOne,
-        h5: "Username",
-        h6: "Profession",
+        h5: "Erhan Fırat",
+        h6: "Project Owner",
+        linkedin: "https://www.linkedin.com/in/erhanfirat/",
       },
       {
         img: images.about.teamContainerTwo,
-        h5: "Username",
-        h6: "Profession",
+        h5: "Gökhan Özdemir",
+        h6: "Scrum Master",
       },
       {
         img: images.about.teamContainerThree,
-        h5: "Username",
-        h6: "Profession",
+        h5: "Hilal Bilun Kara",
+        h6: "Full Stack Developer",
       },
       {
         img: images.about.teamContainerNewOne,
