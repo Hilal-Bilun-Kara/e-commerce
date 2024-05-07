@@ -33,4 +33,7 @@ body {
   .product-detail-color {
     @apply w-[30px] h-[30px]  rounded-full shadow-sm hover:bg-sky-200 cursor-pointer;
   }
+  .team-second-section {
+    @apply w-[180px] sm:w-[360px] h-[260px] object-cover mb-[9px];
+  }
 }

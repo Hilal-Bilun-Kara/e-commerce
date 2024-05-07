@@ -24,9 +24,10 @@ import imageFeaturedTwo from "../assets/home/featuredPosts/imageTwo.jpeg";
 import imageFeaturedThree from "../assets/home/featuredPosts/imageThree.jpeg";
 import aboutImage from "./about/page/aboutImage.png";
 import video from "./about/page/video.jpeg";
-import teamContainerOne from "./about/team/teamContainerOne.jpeg";
-import teamContainerTwo from "./about/team/teamContainerTwo.jpeg";
-import teamContainerThree from "./about/team/teamContainerThree.jpeg";
+
+import teamContainerOne from "./about/team/Erhan-Firat.jpg";
+import teamContainerTwo from "./about/team/Gokhan-Ozdemir.jpg";
+import teamContainerThree from "./about/team/Hilal-Bilun-Kara.jpeg";
 import teamContainerNewOne from "./about/team/teamContainer-1.jpeg";
 import teamContainerNewTwo from "./about/team/teamContainer-2.jpeg";
 import teamContainerNewThree from "./about/team/teamContainer-3.jpeg";
