@@ -80,7 +80,7 @@ export function ShopPage() {
           </div>
         </>
         {/*ProductCard*/}
-        <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 sm:gap-3 ml-24 md:mr-16 mt-[5%] md:mt-[5%]">
+        <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-3 sm:gap-3 ml-24 md:mr-16 mt-[5%] md:mt-[5%]">
           {productCards.map((item, index) => (
             <div
               key={index}

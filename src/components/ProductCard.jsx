@@ -4,7 +4,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 function ProductCard({ data }) {
   return (
     <Link to={`/product/${data.id}`} className="flex flex-col">
-      <img src={data.img} alt={data.product} className="object-contain" />
+      <img src={data.img} alt={data.product} />
       <div className="flex flex-col gap-1 items-center">
         <h5 className="font-semibold mt-5">{data.category}</h5>
         <span className="text-secondarygray text-sm font-semibold text-[#737373]">

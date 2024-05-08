@@ -19,7 +19,7 @@ export function BestSeller() {
           {bestSellersText.p}{" "}
         </p>
       </div>
-      <div className="grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 gap-6 ml-16 md:mr-12 mt-[5%] md:mt-[5%]">
+      <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 gap-6 ml-16 md:mr-12 mt-[5%] md:mt-[5%]">
         {productCards.map((item, index) => (
           <div key={index} className="flex flex-row max-w-60 md:mx-auto mb-5">
             <ProductCard data={item} key={index} />

@@ -4,7 +4,9 @@
 
 html,
 body {
-  height: 100%;
+  margin: 0 auto;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 @layer components {
@@ -35,5 +37,12 @@ body {
   }
   .team-second-section {
     @apply w-[180px] sm:w-[360px] h-[260px] object-cover mb-[9px];
+  }
+  .metrics {
+    @apply text-slate-800 text-[58px] font-bold;
+  }
+
+  .metricsTitle {
+    @apply text-center text-neutral-500 text-base font-bold;
   }
 }

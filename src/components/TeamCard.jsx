@@ -7,7 +7,8 @@ import {
 
 export default function TeamCard({ item }) {
   return (
-    <div className="flex flex-col items-center flex-grow-1 basis-[330px] ring-1 ring-slate-400 rounded shadow-lg">
+    <div className="flex flex-col items-center flex-grow-1 basis-[330px]">
+      {/* {ring-1 ring-slate-400 rounded shadow-lg} */}
       <img src={item.img} className="w-full h-full rounded-t" />
       <div className="flex flex-col gap-2 items-center text-center py-3">
         <h5 className="text-slate-800 text-base font-bold">{item.h5}</h5>

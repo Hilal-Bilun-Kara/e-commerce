@@ -67,7 +67,7 @@ export default function TeamPage() {
       </div>
       {/* Üçüncü section */}
       <div className="flex flex-col items-center justify-center gap-6">
-        <h2 className="text-slate-800 text-[40px] font-bold py-[60px] w-[200px] sm:w-[300px] text-center">
+        <h2 className="text-slate-800 text-[40px] font-bold py-[60px] w-[300px] sm:w-[200px] text-center">
           Meet Our Team
         </h2>
       </div>
