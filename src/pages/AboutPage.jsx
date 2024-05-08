@@ -35,9 +35,9 @@ export default function AboutPage() {
         <div className="flex sm:flex-col md:flex-row items-center justify-start mx-auto">
           <div className="flex flex-col gap-[35px] mx-[10%] w-[500px] sm:items-center justify-start sm:w-[300px]">
             <h5 className="text-[#252B42] font-bold sm:flex sm:hidden">{h5}</h5>
-            <h1 className=" text-[#252B42] text-[40px] font-bold">{h1}</h1>
-            <h4 className="  text-neutral-500 text-xl font-normal">{h4}</h4>
-            <div className=" justify-start flex ">
+            <h1 className="text-[#252B42] text-[40px] font-bold">{h1}</h1>
+            <h4 className="text-neutral-500 text-xl ">{h4}</h4>
+            <div className="justify-start flex ">
               <button className="text-white text-sm font-bold px-[40px] py-[15px] rounded-[5px] bg-[#23A6F0] ">
                 {btnText}
               </button>
@@ -120,7 +120,7 @@ export default function AboutPage() {
             <h2 className="text-[#252B42] text-[40px] sm:w-[280px] font-bold ">
               {clientsHeader}
             </h2>
-            <p className="text-[#737373] text-sm font-normal w-[350px] sm:w-[350px] mb-[5%] ">
+            <p className="text-[#737373] text-sm w-[350px] sm:w-[350px] mb-[5%] ">
               {clientsText}
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function AboutPage() {
           <div className="w-[40%] sm:w-[60%] flex flex-col sm:items-center sm:text-center my-auto gap-7 mx-[10%] sm:mx-[20%]">
             <h5 className="text-white text-[18px] font-bold">{containerH5}</h5>
             <h2 className="text-white text-[40px] font-bold">{containerH2}</h2>
-            <p className=" w-[100%] sm:w-[70%] text-white text-sm font-normal">
+            <p className=" w-[100%] sm:w-[70%] text-white text-sm ">
               {containerText}
             </p>
             <div className="flex ">
