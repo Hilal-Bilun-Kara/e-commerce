@@ -46,18 +46,18 @@ body {
     @apply text-center text-neutral-500 text-base font-bold;
   }
   .form-error {
-    @apply mt-1 ml-1 text-[15px] text-red-600 w-[30%] sm:w-[50%];
+    @apply mt-1 ml-1 text-[15px] text-red-600 w-[30%] sm:w-[60%] md:w-[60%];
   }
   .form-label {
     @apply text-base font-bold text-gray-600 block;
   }
   .form-input {
-    @apply w-[30%] sm:w-[50%] p-3 border border-solid text-sm;
+    @apply w-[30%] sm:w-[70%] md:w-[70%] p-3 border border-solid text-sm;
   }
   .button-signup {
     @apply border w-[20%] border-[#23A6F0] rounded bg-[#23A6F0] text-white font-bold sm:w-[50%] md:w-[30%] py-[1%] px-[2%] mt-[5%] sm:mt-[10%] md:mt-[10%];
   }
   .store-input {
-    @apply border rounded-md p-3 mb-2 w-[30%];
+    @apply border rounded-md p-3 mb-2 w-[30%] sm:w-[70%] md:w-[70%];
   }
 }
