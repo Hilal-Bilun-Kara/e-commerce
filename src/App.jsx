@@ -53,6 +53,11 @@ function App() {
           <AboutPage />
           <Footer />
         </Route>
+        <Route path="/signup" exact>
+          <Header />
+          <SignUp />
+          <Footer />
+        </Route>
       </Switch>
     </ContextProvider>
   );
