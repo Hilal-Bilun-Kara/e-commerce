@@ -7,6 +7,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingSpinner from "../components/LoadingSpinner";
+import { useNavigate } from "react-router-dom";
 
 const initialForm = {
   name: "",
@@ -72,9 +73,12 @@ export default function SignUp() {
             position: "top-right",
           }
         );
-        setLoading(false);
+        {
+          /*setLoading(false);
         //Önceki sayfaya yönlendir.
-        setTimeout(() => navigate(-1), 5000);
+        setTimeout(() => useNavigate(-1), 5000);
+     */
+        }
       })
       .catch((err) => {
         console.log("Error:", err);
