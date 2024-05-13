@@ -119,7 +119,7 @@ function Header() {
                 Login
               </a>{" "}
               /{" "}
-              <a href="/register/" className="hover:text-gray-300 mr-2">
+              <a href="/signup" className="hover:text-gray-300 mr-2">
                 Register
               </a>
               <FontAwesomeIcon
