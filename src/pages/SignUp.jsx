@@ -1,5 +1,4 @@
 import { axiosInstance } from "../api/api";
-import Sign from "../assets/home/loginRegister/SignUp.png";
 
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -83,10 +82,6 @@ export default function SignUp() {
       });
     console.log(data);
   };
-
-  <div className="flex justify-center text-center mb-[5%]">
-    <img src={Sign} />
-  </div>;
 
   return (
     <>

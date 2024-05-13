@@ -12,6 +12,7 @@ import { ShopPage } from "./pages/ShopPage";
 import { ContactPage } from "./pages/ContactPage";
 import TeamPage from "./pages/TeamPage";
 import AboutPage from "./pages/AboutPage";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
@@ -50,6 +51,11 @@ function App() {
         <Route path="/about" exact>
           <Header />
           <AboutPage />
+          <Footer />
+        </Route>
+        <Route path="/signup" exact>
+          <Header />
+          <SignUp />
           <Footer />
         </Route>
       </Switch>
