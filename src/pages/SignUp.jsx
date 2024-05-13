@@ -72,12 +72,6 @@ export default function SignUp() {
             position: "top-right",
           }
         );
-        {
-          /*setLoading(false);
-        //Önceki sayfaya yönlendir.
-        setTimeout(() => useNavigate(-1), 5000);
-     */
-        }
       })
       .catch((err) => {
         console.log("Error:", err);
