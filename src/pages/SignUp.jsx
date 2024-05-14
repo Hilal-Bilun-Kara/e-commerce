@@ -21,6 +21,7 @@ const initialForm = {
   },
 };
 
+//ToDo: isim,mail olmadan mağaza seçimine geçilmemeli mi?
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
 
