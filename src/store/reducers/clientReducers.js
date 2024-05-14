@@ -16,7 +16,7 @@ const initialState = {
   language: "",
 };
 
-const reducer = (state = initialState, action) => {
+const clientReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_USER:
       return { ...state, user: action.payload };
@@ -35,4 +35,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default clientReducer;

@@ -1,2 +1,2 @@
-const reducer = () => {};
-export default reducer;
+const productReducers = () => {};
+export default productReducers;
