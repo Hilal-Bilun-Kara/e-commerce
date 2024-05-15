@@ -22,6 +22,8 @@ const initialForm = {
 };
 
 //ToDo: isim,mail olmadan mağaza seçimine geçilmemeli mi?
+//ToDo: Yönetici olarak kayıt olunmaması gerekiyor.
+//ToDo: Mağaza seçilsede email, password, name alanları doldurulmalı!
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
 
