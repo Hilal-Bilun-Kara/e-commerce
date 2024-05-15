@@ -6,8 +6,9 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingSpinner from "../components/LoadingSpinner";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { fetchRoles } from "../store/actions/clientAction";
 
 const initialForm = {
   name: "",
@@ -39,11 +40,12 @@ export default function SignUp() {
     defaultValues: initialForm,
   });
 
-  let navigate = useNavigate();
   const [roles, setRoles] = useState([]);
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const api = axiosInstance();
   const dispatch = useDispatch();
+  //const roles = useSelector((store) => store.roles);
 
   useEffect(() => {
     setValue("id", "3");
@@ -53,18 +55,9 @@ export default function SignUp() {
     setShowPassword(!showPassword);
   };
 
-  //ToDo: Storedan roles çekilmesi gerek ihtiyaç durumunda
-  const fetchRoles = () => (dispatch) => {
-    api
-      .get("/roles")
-      .then((res) => {
-        dispatch(setRoles(res.data));
-      })
-      .catch((err) => console.log(err));
-  };
-
+  // fetchRoles fonksiyonunu çağır.
   useEffect(() => {
-    dispatch(fetchRoles()); // fetchRoles fonksiyonunu çağır
+    dispatch(fetchRoles());
   }, []);
 
   const onSubmit = (data) => {
