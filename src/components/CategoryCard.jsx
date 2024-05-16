@@ -1,5 +1,5 @@
 import { data } from "../data/data";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 
 export default function CategoryCard({ category }) {
   const { title, img, id, gender } = category;
