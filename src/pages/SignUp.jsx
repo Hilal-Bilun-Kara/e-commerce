@@ -6,6 +6,9 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingSpinner from "../components/LoadingSpinner";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { fetchRoles } from "../store/actions/clientAction";
 
 const initialForm = {
   name: "",
@@ -21,6 +24,9 @@ const initialForm = {
   },
 };
 
+//ToDo: isim,mail olmadan mağaza seçimine geçilmemeli mi?
+//ToDo: Yönetici olarak kayıt olunmaması gerekiyor.
+//ToDo: Mağaza seçilsede email, password, name alanları doldurulmalı!
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -35,21 +41,11 @@ export default function SignUp() {
   });
 
   const [roles, setRoles] = useState([]);
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const api = axiosInstance();
-
-  useEffect(() => {
-    const fetchRoles = async () => {
-      try {
-        const response = await api.get("/roles");
-        setRoles(response.data);
-        console.log(response.data);
-      } catch (error) {
-        console.error("Error fetching roles:", error);
-      }
-    };
-    fetchRoles();
-  }, []);
+  const dispatch = useDispatch();
+  //const roles = useSelector((store) => store.roles);
 
   useEffect(() => {
     setValue("id", "3");
@@ -58,6 +54,11 @@ export default function SignUp() {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
+  // fetchRoles fonksiyonunu çağır.
+  useEffect(() => {
+    dispatch(fetchRoles());
+  }, []);
 
   const onSubmit = (data) => {
     delete data.confirmPassword;

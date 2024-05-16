@@ -14,13 +14,6 @@ import { useRef, useState } from "react";
 import Categories from "../components/Categories.jsx";
 import Customer from "../layout/Customer.jsx";
 import ProductCard from "../components/ProductCard.jsx";
-import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
-import {
-  useHistory,
-  useLocation,
-  useParams,
-} from "react-router-dom/cjs/react-router-dom.min.js";
-import { useDispatch, useSelector } from "react-redux";
 
 export function ShopPage() {
   const { categories } = data.shop;

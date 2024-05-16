@@ -12,6 +12,7 @@ import React, { useState } from "react";
 import ProductCard from "../components/ProductCard.jsx";
 import Customer from "../layout/Customer.jsx";
 
+//ToDo: Product Card boyutlarını ve footer üstündeki boşluğu
 export function ProductDetail() {
   const {
     name,
