@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { axiosInstance } from "../../api/api";
 
 export const SET_USER = "SET_USER";
@@ -39,11 +40,32 @@ export const setLanguage = (language) => ({
   payload: language,
 });
 
-export const fetchRoles = () => (dispatch) => {
+export const actionRoles = () => (dispatch) => {
   api
     .get("/roles")
     .then((res) => {
       dispatch(setRoles(res.data));
     })
     .catch((err) => console.log(err));
+};
+
+//Fonksiyon, kullanıcı bilgilerini ve bir yönlendirme işlevini alır ve bu bilgileri kullanarak bir POST isteği gönderir.
+
+export const userLogin = (formData, navigate) => (dispatch) => {
+  api
+    .post("/login", formData)
+    .then((res) => {
+      toast.success("Login Success!", { position: "top-right" });
+      if (formData.rememberMe) {
+        localStorage.setItem("token", res.data.token);
+      }
+      dispatch(setUser(res.data));
+      setTimeout(() => navigate(-1), 2000); // Eğer önceki bir sayfa varsa, kullanıcıyı oraya yönlendirir
+    })
+    .catch((err) => {
+      console.log(err);
+      toast.error("Geçersiz e-posta veya !", {
+        position: "top-right",
+      });
+    });
 };

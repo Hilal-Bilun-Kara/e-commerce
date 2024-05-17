@@ -13,6 +13,9 @@ body {
   .header-shopping-icon {
     @apply text-[#00A1C1] hover:text-gray-300 mr-4;
   }
+  .hover-text-gray {
+    @apply hover:text-gray-300;
+  }
   .footer-list li {
     margin-bottom: 10px;
     color: #737373;

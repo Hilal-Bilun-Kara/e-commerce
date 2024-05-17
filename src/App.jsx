@@ -13,6 +13,7 @@ import TeamPage from "./pages/TeamPage";
 import AboutPage from "./pages/AboutPage";
 import SignUp from "./pages/SignUp";
 import { Route, Routes } from "react-router-dom";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/team" element={<TeamPage />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />
     </ContextProvider>
