@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { data } from "../data/data";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Categories from "../components/Categories.jsx";
 import Customer from "../layout/Customer.jsx";
 import ProductCard from "../components/ProductCard.jsx";

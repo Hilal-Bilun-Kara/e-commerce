@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { fetchRoles } from "../store/actions/clientAction";
+import { actionRoles } from "../store/actions/clientAction";
 
 const initialForm = {
   name: "",
@@ -40,12 +40,11 @@ export default function SignUp() {
     defaultValues: initialForm,
   });
 
-  const [roles, setRoles] = useState([]);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const api = axiosInstance();
   const dispatch = useDispatch();
-  //const roles = useSelector((store) => store.roles);
+  const useRole = useSelector((store) => store.client.roles);
 
   useEffect(() => {
     setValue("id", "3");
@@ -55,9 +54,8 @@ export default function SignUp() {
     setShowPassword(!showPassword);
   };
 
-  // fetchRoles fonksiyonunu çağır.
   useEffect(() => {
-    dispatch(fetchRoles());
+    dispatch(actionRoles());
   }, []);
 
   const onSubmit = (data) => {
@@ -146,8 +144,8 @@ export default function SignUp() {
               {...register("password", {
                 required: "Password field can not be empty.",
                 minLength: {
-                  value: 8,
-                  message: "Password must be at least 8 characters long.",
+                  value: 6,
+                  message: "Password must be at least 6 characters long.",
                 },
                 pattern: {
                   value: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
@@ -205,7 +203,7 @@ export default function SignUp() {
           value={watch("id") || initialForm.id}
           onChange={(e) => setValue("id", e.target.value)}
         >
-          {roles.map((item) => {
+          {useRole.map((item) => {
             return (
               <option
                 value={item.id}
